@@ -1,0 +1,37 @@
+//box
+.box {
+    background-color: var(--bg-content);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+
+    &-header {
+        padding: 10px 0 30px;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--color-text);
+        position: relative;
+        background-image: linear-gradient(to left, #4ec7f7, #4a64f7);
+        display: inline-block;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+}
+
+.dark .box {
+    border: 1px solid var(--bg-content);
+    background-color: var(--bg-body);
+}
+
+.box-hover {
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05) translateY(-10px);
+        box-shadow: rgb(0 0 0 /10%) 0px 15px 30px;
+    }
+}
+
+//box

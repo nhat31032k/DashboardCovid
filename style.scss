@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Cairo:200,300,regular,500,600,700,800,900);
+@import"./mixin/grid";
+@import"./mixin/color";
+@import"./mixin/box";
+@import"./mixin/country";
+@import"./mixin/loader";
+@import"./mixin/footer";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+}
+
+body {
+    position: relative;
+    background-color: var(--bg-body);
+    color: var(--color-txt);
+    padding-top: calc(var(--nav-height) + 30px);
+    font-size: 16px;
+
+}
+
+input,
+textarea,
+select,
+button {
+    outline: none;
+}
+
+input {
+    line-height: normal;
+}
+
+label,
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+@mixin size($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+.container {
+    max-width: 100%;
+    margin: auto;
+
+}
+
+.content {
+    padding: 15px;
+}
+
+///top nav
+.nav-wrapper {
+    background-color: var(--bg-content);
+    box-shadow: var(----shadow);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 30px;
+    z-index: 99;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color: var(--color-txt);
+        font-size: 2rem;
+        font-weight: 500;
+
+        & i {
+            color: red;
+        }
+    }
+
+    .darkmode_switch {
+        --width: 60px;
+        --height: 20px;
+        width: var(--width);
+        height: var(--height);
+        background-color: lightslategray;
+        border-radius: 10px;
+        position: relative;
+
+        & span {
+            display: inline-grid;
+            place-items: center;
+            height: calc(var(--height)*2);
+            width: calc(var(--height)*2);
+            border-radius: 50%;
+            background-color: var(--color-txt);
+            color: var(--bg-content);
+            font-size: 2rem;
+            position: absolute;
+            left: 0;
+            top: calc(-1 * var(--height)/2);
+            transition: left 0.3s ease-in-out;
+
+            & .fa-cloud-moon {
+                display: none;
+            }
+
+        }
+    }
+}
+
+.darkmode_switch.dark span {
+    left: calc(var(--width) - var (--height));
+    background-color: var(--bg-body);
+    color: var(--color-txt);
+}
+
+.darkmode_switch.dark span .fa-cloud-moon {
+    display: inline-block;
+}
+
+.darkmode_switch.dark span .fa-cloud-sun {
+    display: none;
+}
+
+//top nav

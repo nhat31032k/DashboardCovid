@@ -1,0 +1,15 @@
+:root {
+    --bg-body: #f6f9ff;
+    --bg-content: #ffffff;
+    --bg-hover: #f4f4f4;
+    --color-txt: #172b4d;
+    --nav-height: 70px;
+    --shadow: 0px 0px 30px 0 rgb(82 63 105 / 5%);
+}
+
+.dark {
+    --bg-body: #151515;
+    --bg-content: #242526;
+    --bg-hover: #151f28;
+    --color-txt: #dcdcdc;
+}

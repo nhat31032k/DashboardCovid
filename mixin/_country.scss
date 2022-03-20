@@ -1,0 +1,153 @@
+//country drop down
+.country-select {
+    position: relative;
+
+    &-toggle {
+        display: flex;
+        align-items: center;
+        // margin-left: 5px;
+        // justify-content: center;
+        // justify-content: space-between;
+        font-size: 1.25rem;
+        padding: 0 15px;
+        font-weight: 700;
+        position: relative;
+
+        & i {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+
+    &-list {
+        position: absolute;
+        top: calc(100% + 50px);
+        left: 0;
+        width: 100%;
+        max-height: 600px;
+        overflow-y: scroll;
+        padding: 15px;
+        background-color: var(--bg-content);
+        z-index: 99;
+        box-shadow: var(--shadow);
+        border-radius: 10px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+
+        & input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: #e2e8f0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        &:active {
+            top: calc(100% + 20px);
+            visibility: visible;
+            opacity: 1;
+        }
+
+    }
+}
+
+.country-item {
+    padding: 5px 15px;
+
+    &:hover {
+        background-color: var(--bg-color);
+    }
+}
+
+//country drop down
+//count-box
+.count {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-icon {
+        --width: 70px;
+        width: var(--width);
+        height: var(--width);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 2.5rem;
+        margin-right: 15px;
+    }
+
+    &-info h5 {
+        font-size: 1.5rem;
+    }
+
+    &-info span {
+        display: inherit;
+        margin-top: -14px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &-confirmed .count-icon {
+        background-color: #ffa0a0;
+        color: red;
+    }
+
+    &-confirmed .count-info h5 {
+        // background-color: #bffabf;
+        color: red;
+    }
+
+    &-recovered .count-icon {
+        background-color: #bffabf;
+        color: green;
+    }
+
+    &-recovered .count-info h5 {
+        // background-color: #bffabf;
+        color: green;
+    }
+
+    &-deadth .count-icon {
+        background-color: #e2e8f0;
+        color: #373c43;
+    }
+
+    &-deadth .count-icon h5 {
+        // background-color: #e2e8f0;
+        color: #373c43;
+    }
+}
+
+//count-box
+//countries-table
+//countries-table
+.table-countries {
+    width: 100%;
+    border-spacing: 0;
+
+    & thead tr th,
+    & tbody tr td {
+        border-bottom: 1px solid var(--bg-body);
+    }
+
+    & th {
+        padding: 0.5rem;
+    }
+
+    & td {
+        padding: 0.5rem;
+        font-weight: 0.5rem;
+        width: 25%;
+        text-align: center;
+    }
+
+    & tbody tr:hover {
+        background-color: var(--bg-hover);
+    }
+}
+
+//countries-table
